@@ -1,0 +1,83 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<nav class="navbar navbar-expand-lg">
+	<div class="container">
+		<!-- LOGO -->
+		<a class="navbar-brand" href="<%=request.getContextPath()%>"> <img
+			src="images/marteau-aux-encheres.png" height="50px">
+		</a>
+
+		<!--         Bouton du menu déroulant (s'affiche sur les petits écrans) -->
+		<button class="navbar-toggler border-0" type="button"
+			data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon navbar-dark"></span>
+		</button>
+
+		<!-- Contenu du menu -->
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<!-- Menu des pages principales à gauche -->
+			
+			<ul class="navbar-nav col-10">
+				<li class="nav-item active"><a class="nav-link"
+					href="<%=request.getContextPath()%>">
+						<div class="typewriter">
+							<h1>Trocenchere.com</h1>
+						</div>
+				</a></li>
+				<c:if test="${not empty sessionScope.profilConnecte}">
+					<li class="nav-item"><a class="nav-link"
+						href="<%=request.getContextPath()%>/ServletNouvelleVente
+						">Vendre
+							un article</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="<%=request.getContextPath()%>/affichageUtilisateur">Rechercher
+							un profil</a></li>
+				</c:if>
+			</ul>
+
+			<!-- Menu du profil avec menu déroulant à droite -->
+			<ul class="navbar-nav col-2">
+				<!-- Utilisez ml-auto ici aussi -->
+				<c:choose>
+					<c:when test="${not empty sessionScope.profilConnecte}">
+						<li class="nav-item dropdown">
+							<div class="dropdown">
+								<button class="btn dropdown-toggle text-light" type="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+										fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+  							<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+  							<path fill-rule="evenodd"
+											d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+							</svg>
+									<c:out value="${ user.pseudo }" />
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li><a class="dropdown-item"
+										href="<%=request.getContextPath()%>/ServletProfilUtilisateur">Paramètres</a></li>
+									<c:if test="${ user.administrateur }">
+										<li><a class="dropdown-item"
+											href="<%=request.getContextPath()%>/espace_admin/accueil">Administration</a></li>
+									</c:if>
+									<li><a class="dropdown-item"
+										href="<%=request.getContextPath()%>/deconnexion">Se
+											déconnecter</a></li>
+								</ul>
+							</div>
+						</li>
+					</c:when>
+					<c:otherwise>
+
+						<li class="nav-item"><a class="nav-link"
+							href="<%=request.getContextPath()%>/inscription">S'inscrire</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="<%=request.getContextPath()%>/connexion">Se connecter</a></li>
+					</c:otherwise>
+				</c:choose>
+
+			</ul>
+		</div>
+	</div>
+</nav>

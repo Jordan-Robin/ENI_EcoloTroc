@@ -1,0 +1,96 @@
+/* Réinitialisation des marges et des rembourrages par défaut */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* MENU */
+.navbar {
+    background-color: #004040;
+    width: 100%;
+    height: 80px;
+}
+
+.navbar-nav .nav-link{
+    color : white;
+}
+
+#navbarNav {
+	background-color : none;
+	padding: 15px;
+	z-index:1;
+	border-radius: 15px
+}
+
+.card#carteArticle {
+	transition: transform 0.3s ease-in-out;
+}
+
+.card#carteArticle:hover{
+	color: #004040;
+	transform: scale(1.05);
+}
+
+.card#derniereEnchere {
+	transition : none;
+}
+
+.card#derniereEnchere:hover {
+	transform : none;
+}
+
+/* .dropdown-menu { */
+/*    right: 0 !important; */
+/*    left: auto !important; */
+/* } */
+
+/* CORPS */
+h1 {
+    color: #004040;
+}
+
+.typewriter h1 {
+	color: white;
+	font-size : 16px;
+	font-family: courier, courier new, serif;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2.5s steps(15, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* FOOTER */
+footer {
+    height: 50px;
+    width: 100%;
+/*     position: absolute; */
+/*     bottom: 0; */
+    background-color: #004040;
+    color: white;
+}
+
+footer p {
+	padding-top :10px;
+}

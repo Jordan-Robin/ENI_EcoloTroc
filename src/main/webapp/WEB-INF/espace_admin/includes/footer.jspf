@@ -1,0 +1,7 @@
+<footer class="absolute">
+
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <p class="m-0 text-center">Site d'enchères réalisé pour l'ENI - Ecole Informatique</p>
+    </div>
+    
+</footer>

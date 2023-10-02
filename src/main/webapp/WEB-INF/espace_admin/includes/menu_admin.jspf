@@ -1,0 +1,26 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="position-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="<%=request.getContextPath()%>/espace_admin/accueil">
+                    Accueil
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<%=request.getContextPath()%>/espace_admin/gestion_utilisateurs">
+                    Utilisateurs
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<%=request.getContextPath()%>/espace_admin/gestion_ventes">
+                    Gestion des Ventes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<%=request.getContextPath()%>/espace_admin/gestion_categories">
+                    Catégories d'Articles
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
