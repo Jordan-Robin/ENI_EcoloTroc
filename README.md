@@ -22,4 +22,4 @@ Certains utilisateurs ont le profil d'administrateurs. A ce titre, ils peuvent :
 
 -> modifier la liste des catégories d'articles (exemples : mobilier, automobile, électroménager, etc.)
 
-![Capture d'écran 2023-10-03 113357](https://github.com/Jordan-Robin/ENI_EcoloTroc/assets/126224637/cfdc4271-0e86-499a-bf73-a265a15f91fd)
+![page_accueil](https://github.com/Jordan-Robin/ENI_EcoloTroc/assets/126224637/11d29909-4a52-45b3-af85-0509dee99149)
